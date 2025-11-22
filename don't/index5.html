@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <title>I Love You</title>
+</head>
+
+<body>
+    <div class="flex justify-center bg-[url(/images/bg.jpg)] bg-cover bg-center lg:h-[50vmax] h-[100vmax]">
+        <div class="my-auto p-5 content backdrop-blur-md bg-[rgba(255,0,140,0.23)] rounded-xl drop-shadow-2xl/50">
+            <div id="fifth" class="my-auto">
+                <img class="mx-auto h-60" src="images/5.gif" alt="" />
+                <h1 class="text-center text-shadow-lg text-2xl poppins-semibold text-white ">
+                    Makasih ya ABDUL,
+                </h1>
+                <h1 class="text-center text-shadow-lg text-2xl poppins-semibold text-white ">
+                    Udah Terima Aku
+                </h1>
+                <h1 class="text-shadow-lg text-2xl poppins-semibold text-white mt-5">
+                    Jadwal First Date Kita
+                </h1>
+                <div id="firstDateTable" class="schedule mt-3">
+                    <ul class="">
+                        <li class="bg-[rgba(255,255,255,0.8)] p-5 rounded-lg">
+                            <table>
+                                <tbody id="schedule" class="">
+                                    <!-- {{ $SLOT }} -->
+                                </tbody>
+                            </table>
+                        </li>
+                        <li class="flex justify-center">
+                                <button id="sendMessage"
+                                    class="w-30 text-white poppins-medium cursor-pointer mt-3 bg-pink-500 duration-300 p-3 rounded-md hover:bg-pink-600"
+                                    type="submit">
+                                    Kirim
+                                    &raquo; </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Define all Elements 
+        const tableSchedule = document.querySelector('#schedule');
+        const waLink = document.querySelector('#whatsapp');
+        const sendMessage = document.querySelector('#sendMessage');
+
+        // Get all data
+        const sendTo = localStorage.getItem('sendTo')
+        const name = localStorage.getItem('name');
+        const date = localStorage.getItem('date');
+        const time = localStorage.getItem('time');
+        const film = localStorage.getItem('film');
+        const food = localStorage.getItem('food');
+
+        // DATE FORMAT
+        const inputDate = date;
+
+        // ubah ke objek Date
+        const dateObj = new Date(inputDate);
+
+        // format ke bahasa Indonesia
+        const formatted = new Intl.DateTimeFormat("id-ID", {
+            weekday: "long",
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        }).format(dateObj);
+
+        console.log(formatted);
+
+
+
+        // schedule body
+        tableSchedule.innerHTML = 
+            `<tr>
+                <th class='text-sm text-left poppins-bold text-pink-500 pr-2 text-shadow-lg'>Nama<span> :</span></th>
+                <td class='text-sm text-start poppins-bold text-pink-500'> ${name}</td>
+            </tr>
+            <tr>
+                <th class='text-sm text-left poppins-bold text-pink-500 pr-2 text-shadow-lg'>Tanggal<span> :</span></th>
+                <td class='text-sm text-start poppins-bold text-pink-500'> ${formatted}</td>
+            </tr>
+            <tr>
+                <th class='text-sm text-left poppins-bold text-pink-500 pr-2 text-shadow-lg'>Jam<span> :</span></th>
+                <td class='text-sm text-start poppins-bold text-pink-500'> ${time}</td>
+            </tr>
+            <tr>
+                <th class='text-sm text-left poppins-bold text-pink-500 pr-2 text-shadow-lg'>Film<span> :</span></th>
+                <td class='text-sm text-start poppins-bold text-pink-500'> ${film}</td>
+            </tr>
+            <tr>
+                <th class='text-sm text-left poppins-bold text-pink-500 pr-2 text-shadow-lg'>Makan<span> :</span></th>
+                <td class='text-sm text-start poppins-bold text-pink-500'> ${food}</td>
+            </tr>`
+            
+        // Kirim button
+        sendMessage.addEventListener('click', function(){
+            window.location.href = `https://api.whatsapp.com/send?phone=${sendTo}&text=*Haiii!%20%F0%9F%98%84%F0%9F%92%9E%20${name}%20di%20sini*~%0AAku%20udah%20lihat%20rencana%20kamu%2C%20dan%20keliatannya%20*lucu%20banget*%20hehe.%0A*${formatted}*%2C%20jam%20*${time}*%2C%20nonton%20film%20*${film}*%20%F0%9F%8E%AC%2C%20habis%20itu%20makan%20*${food}*%20bareng%E2%80%A6%0AKayaknya%20bakal%20jadi%20hari%20yang%20super%20seru%20ya%20%E2%9C%A8%0AAku%20suka%20banget%20idenya%2C%20dan%20tentu%20aja%20aku%20mau%20ikut!%0ANanti%20tinggal%20kirim%20lokasi%20ya%E2%80%A6%0AAku%20udah%20nggak%20sabar%20nih%F0%9F%98%B3%F0%9F%92%97`;
+        })
+
+
+
+        // chat
+        /*
+        Haiii! 😄💞 {Aisyah} di sini~
+        Aku udah lihat rencana kamu, dan keliatannya lucu banget hehe.
+        {13 November}, jam {10:40}, nonton film DOPAMIN 🎬, habis itu makan {BURGER} bareng…
+        Kayaknya bakal jadi hari yang super seru ya ✨
+        Aku suka banget idenya, dan tentu aja aku mau ikut!
+        Nanti tinggal kirim lokasi ya…
+        Aku udah nggak sabar nih😳💗
+
+        Haiii! 😄💞 Aisyah di sini~
+Aku udah lihat rencana kamu, dan keliatannya lucu banget hehe.
+13 November, jam 10:40, nonton film DOPAMIN 🎬, habis itu makan BURGER bareng…
+Kayaknya bakal jadi hari yang super seru dan super manis antara kita ✨
+Aku suka banget idenya, dan tentu aja aku mau ikut!
+Nanti tinggal kirim lokasi ya…
+Aku udah nggak sabar mau lihat kamu di dunia nyata 😳💗
+        */
+    </script>
+</body>
+
+</html>

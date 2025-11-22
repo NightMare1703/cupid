@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <title>I Love You</title>
+</head>
+
+<body>
+    <audio autoplay loop src="audio/cupid.mp3"></audio>
+    <div class="flex justify-center bg-[url(/images/bg.jpg)] bg-cover bg-center lg:h-[50vmax] h-[100vmax]">
+        <div class="my-auto p-5 content backdrop-blur-md bg-[rgba(255,0,140,0.23)] rounded-xl drop-shadow-2xl/50">
+
+            <!-- First Display -->
+
+            <div id="first" class="my-auto duration-300">
+                <h1 class="text-center text-shadow-lg text-2xl poppins-black text-white ">
+                    Hai.. Kenalan Yuk!
+                </h1>
+                <img class="mx-auto h-60" src="images/1.gif" alt="" />
+                <form id="submitName">
+                    <input id="name" class="poppins-bold text-pink-700 mt-3 border-2 border-pink-500 p-2 rounded-md w-55 poppins-normal bg-[rgba(255,255,255,0.5)]"
+                        type="text" placeholder="Isi nama kamu ya 🥰" autocomplete="off"/>
+                    <button
+                        class="text-white poppins-medium cursor-pointer bg-pink-500 duration-300 ml-3 p-3 rounded-md hover:bg-pink-600"
+                        type="submit">
+                        Lanjut &raquo;
+                    </button>
+                </form>
+            </div>
+
+            <!-- First Display End -->
+
+            <!-- Second Display -->
+
+            <div id="second" class="my-auto hidden duration-300">
+                <h1 id="h1TitleName" class="text-center text-shadow-lg text-lg poppins-extrabold text-white">Hallo <span id="titleName" class="text-pink-600 bg-white px-1 rounded-sm">Akbar</span> ...</h1>
+                <h1 id="h1SecondTitleName" class="text-center text-shadow-lg text-lg poppins-extrabold text-white"><span id="secondTitleName" class="text-pink-600 bg-white px-1 rounded-sm">Akbar</span> mau gak jadi pacar aku!</h1>
+                <img id="img" class="mx-auto h-60" src="images/2_4.gif" alt="">
+                <ul class="flex justify-evenly mt-5">
+                    <li><button id="mau" class="bg-pink-500 rounded-md p-2 w-23 poppins-medium hover:cursor-pointer hover:bg-pink-600 duration-300 text-white">Mau</button></li>
+                    <li><button id="gakMau" class="bg-pink-500 rounded-md p-2 w-23 poppins-medium hover:cursor-pointer hover:bg-pink-600 duration-300 text-white">Gak Mau</button></li>
+                    <li><button id="next" class="hidden mt-5 mx-auto bg-pink-500 rounded-md p-2 w-23 poppins-medium hover:cursor-pointer hover:bg-pink-600 duration-300 text-white">Lanjut &raquo;</button></li>
+                </ul>
+            </div>
+
+            <!-- Second Display End -->
+
+            <!-- Thirth Display -->
+
+            <div id="when" class="my-auto hidden duration-300">
+                <h1 class="text-center text-shadow-lg text-lg poppins-extrabold text-white">
+                    Kita nonton bareng yuk!
+                </h1>
+                <h1 class="text-center text-shadow-lg text-lg poppins-extrabold text-white">
+                    Kamu ada waktu kapan?
+                </h1>
+                <img class="mx-auto h-60" src="images/3.gif" alt="" />
+                <div class="">
+                    <div class="flex justify-around">
+                        <input id="date"
+                            class="poppins-medium text-pink-700 mt-3 border-2 border-pink-500 p-2 rounded-md poppins-normal bg-[rgba(255,255,255,0.5)]"
+                            type="date" placeholder="Isi nama kamu ya 🥰" autocomplete="off"/>
+                        <input id="time"
+                            class="poppins-medium text-pink-700 mt-3 border-2 border-pink-500 p-2 rounded-md poppins-normal bg-[rgba(255,255,255,0.5)]"
+                            type="time" placeholder="Isi nama kamu ya 🥰" autocomplete="off"/>
+                    </div>
+                    <button id="nextChoseFilm"
+                        class="flex justify-center text-white poppins-medium cursor-pointer mx-auto mt-3 bg-pink-500 duration-300 p-3 rounded-md hover:bg-pink-600 w-60"
+                        type="submit">
+                        Lanjut &raquo;
+                    </button>
+                </div>
+            </div>
+            <div id="film" class="my-auto hidden duration-300">
+                <h1 class="text-center text-shadow-lg text-xl poppins-extrabold text-white">
+                    Kamu mau nonton apa?!
+                </h1>
+                <img class="mx-auto h-60" src="images/3.gif" alt="" />
+                <div id="filmContainer" class="film-container">
+                    <ul class="flex justify-evenly flex-wrap">
+                        <li class="" >
+                            <div class="bg-red">
+                                <img class="film-poster h-40 mt-3 rounded-xl drop-shadow-2xl cursor-pointer hover:scale-[110%] duration-300 hover:border-pink-500" src="film/1.webp" alt="Sampai Titik Terakhirmu">
+                            </div>
+                        </li>
+                        <li class="">
+                            <img class="film-poster h-40 mt-3 rounded-xl drop-shadow-2xl cursor-pointer hover:scale-[110%] duration-300 hover:border-pink-500" src="film/2.webp" alt="Wicked: For Good">
+                        </li>
+                        <li class="">
+                            <img class="film-poster h-40 mt-3 rounded-xl drop-shadow-2xl cursor-pointer hover:scale-[110%] duration-300 hover:border-pink-500" src="film/3.webp" alt="Keadilan (The Verdict)">
+                        </li>
+                        <li class="">
+                            <img class="film-poster h-40 mt-3 rounded-xl drop-shadow-2xl cursor-pointer hover:scale-[110%] duration-300 hover:border-pink-500" src="film/4.webp" alt="Now You See Me: Now You Dont">
+                        </li>
+                        <li class="">
+                            <img class="film-poster h-40 mt-3 rounded-xl drop-shadow-2xl cursor-pointer hover:scale-[110%] duration-300 hover:border-pink-500" src="film/5.webp" alt="Dopamin">
+                        </li>
+                        <li class="">
+                            <img class="film-poster h-40 mt-3 rounded-xl drop-shadow-2xl cursor-pointer hover:scale-[110%] duration-300 hover:border-pink-500" src="film/6.webp" alt="Predator: Badlands">
+                        </li>
+                        <li class="">
+                            <img class="film-poster h-40 mt-3 rounded-xl drop-shadow-2xl cursor-pointer hover:scale-[110%] duration-300 hover:border-pink-500" src="film/7.webp" alt="Pangku">
+                        </li>
+                        <li class="">
+                            <img class="film-poster h-40 mt-3 rounded-xl drop-shadow-2xl cursor-pointer hover:scale-[110%] duration-300 hover:border-pink-500" src="film/8.webp" alt="The Running Man">
+                        </li>
+                        <li class="">
+                            <img class="film-poster h-40 mt-3 rounded-xl drop-shadow-2xl cursor-pointer hover:scale-[110%] duration-300 hover:border-pink-500" src="film/9.webp" alt="Grave Of The Fireflies">
+                        </li>
+                        <li>
+                            <input id="title" class="poppins-bold text-md text-pink-700 mt-3 border-2 border-pink-500 p-2 rounded-md w-85 poppins-normal bg-[rgba(255,255,255,0.5)]"
+                            type="text" placeholder="Tulis judul film lain 🥰" autocomplete="off"/>
+                        </li>
+                        <li>
+                            <button id="nextButton"
+                            class="w-30 text-white poppins-medium cursor-pointer mt-3 bg-pink-500 duration-300 p-3 rounded-md hover:bg-pink-600"
+                            type="submit">
+                            Lanjut
+    &raquo;                        </button>
+                    </li>
+                        </ul>
+                </div>
+            </div>
+
+            <!-- Thirth Display End -->
+
+            <!-- Fourth Display -->
+
+            <div id="fourth" class="my-auto hidden duration-300">
+                <h1 class="text-center text-shadow-lg text-2xl poppins-semibold text-white ">
+                    Habis Nonton
+                </h1>
+                <h1 class="text-center text-shadow-lg text-2xl poppins-semibold text-white ">
+                    Mau Makan Apa?
+                </h1>
+                <img class="mx-auto h-60" src="images/4.gif" alt="" />
+                <div id="filmContainer" class="film-container">
+                    <ul class="flex justify-evenly flex-wrap">
+                        <li class="">
+                            <img class="food-poster w-25 mt-3 rounded-xl drop-shadow-lg cursor-pointer hover:scale-[110%] duration-300 hover:border-pink-500" src="foods/makanan (1).webp" alt="Nasi Padang">
+                        </li>
+                        <li class="">
+                            <img class="food-poster w-25 mt-3 rounded-xl drop-shadow-lg cursor-pointer hover:scale-[110%] duration-300 hover:border-pink-500" src="foods/makanan (2).webp" alt="Nasi Goreng">
+                        </li>
+                        <li class="">
+                            <img class="food-poster w-25 mt-3 rounded-xl drop-shadow-lg cursor-pointer hover:scale-[110%] duration-300 hover:border-pink-500" src="foods/makanan (3).webp" alt="Sate Ayam">
+                        </li>
+                        <li class="">
+                            <img class="food-poster w-25 mt-3 rounded-xl drop-shadow-lg cursor-pointer hover:scale-[110%] duration-300 hover:border-pink-500" src="foods/makanan (4).webp" alt="Burger">
+                        </li>
+                        <li class="">
+                            <img class="food-poster w-25 mt-3 rounded-xl drop-shadow-lg cursor-pointer hover:scale-[110%] duration-300 hover:border-pink-500" src="foods/makanan (5).webp" alt="Spicy Chicken">
+                        </li>
+                        <li class="">
+                            <img class="food-poster w-25 mt-3 rounded-xl drop-shadow-lg cursor-pointer hover:scale-[110%] duration-300 hover:border-pink-500" src="foods/makanan (6).webp" alt="Ketoprak">
+                        </li>
+                        <li class="">
+                            <img class="food-poster w-25 mt-3 rounded-xl drop-shadow-lg cursor-pointer hover:scale-[110%] duration-300 hover:border-pink-500" src="foods/makanan (7).webp" alt="Mie Gacoan">
+                        </li>
+                        <li class="">
+                            <img class="food-poster w-25 mt-3 rounded-xl drop-shadow-lg cursor-pointer hover:scale-[110%] duration-300 hover:border-pink-500" src="foods/makanan (8).webp" alt="Bakso">
+                        </li>
+                        <li class="">
+                            <img class="food-poster w-25 mt-3 rounded-xl drop-shadow-lg cursor-pointer hover:scale-[110%] duration-300 hover:border-pink-500" src="foods/makanan (9).webp" alt="Mie Ayam">
+                        </li>
+                        <li>
+                            <input id="food" class="poppins-bold text-md text-pink-700 mt-3 border-2 border-pink-500 p-2 rounded-md w-85 poppins-normal bg-[rgba(255,255,255,0.5)]"
+                            type="text" placeholder="Mau makan yang lain..🍳" autocomplete="off"/>
+                        </li>
+                        <li>
+                            <button id="fourthNextButton"
+                            class="w-30 text-white poppins-medium cursor-pointer mt-3 bg-pink-500 duration-300 p-3 rounded-md hover:bg-pink-600"
+                            type="submit">
+                            Lanjut
+    &raquo;                        </button>
+                    </li>
+                        </ul>
+                </div>
+            </div>
+
+            <!-- Fourth Display End -->
+
+            <!-- Fifth Display -->
+
+            <div id="fifth" class="my-auto hidden duration-300">
+                <img class="mx-auto h-60" src="images/5.gif" alt="" />
+                <h1 class="text-center text-shadow-lg text-2xl poppins-semibold text-white ">
+                    Makasih ya <span id="thanksTitleName" class="text-pink-600 bg-white px-1 rounded-sm"></span>,
+                </h1>
+                <h1 class="text-center text-shadow-lg text-2xl poppins-semibold text-white ">
+                    Udah Terima Aku
+                </h1>
+                <h1 class="text-shadow-lg text-2xl poppins-semibold text-white mt-5">
+                    Jadwal First Date Kita
+                </h1>
+                <div id="firstDateTable" class="schedule mt-3">
+                    <ul class="">
+                        <li class="bg-[rgba(255,255,255,0.8)] p-5 rounded-lg">
+                            <table>
+                                <tbody id="schedule" class="">
+                                    <!-- {{ $SLOT }} -->
+                                </tbody>
+                            </table>
+                        </li>
+                        <li class="flex justify-center">
+                                <button id="sendMessage"
+                                    class="w-30 text-white poppins-medium cursor-pointer mt-3 bg-pink-500 duration-300 p-3 rounded-md hover:bg-pink-600"
+                                    type="submit">
+                                    Kirim
+                                    &raquo; </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Fifth Display End -->
+        </div>
+    </div>
+    <script>
+
+        // Delete ALl Local Storage
+        localStorage.clear();
+
+        // Difine All Displays
+        const first = document.querySelector('#first');
+        const second = document.querySelector('#second');
+        const fourth = document.querySelector('#fourth');
+        const fifth = document.querySelector('#fifth');
+
+        // First Display Script
+
+        // Define all Elements 
+        const inputName = document.querySelector("#name");
+        const submitName = document.querySelector("#submitName");
+        
+        // klik tombol submit nama (index)
+        
+        submitName.addEventListener('submit', function(e){
+            
+            e.preventDefault();
+            
+            const nama = inputName.value.trim();
+            if(nama === ''){
+                alert('Isi dulu nama kamu ya cantik! 🤗');
+                return;
+            }
+            localStorage.setItem('name', nama.toUpperCase());
+            localStorage.setItem('sendTo', '6285173036787');
+            first.classList.add('hidden');
+            second.classList.remove('hidden');
+            getNameFunction();
+        })
+        
+        // First Display Script End
+
+        // Second Display Script
+
+        // Define all elements
+        const nextPage = document.querySelector('.next-page');
+        const displayName = document.querySelector('#titleName');
+        const secondTitleName = document.querySelector('#secondTitleName');
+        const h1DisplayName = document.querySelector('#h1TitleName');
+        const h1SecondTitleName = document.querySelector('#h1SecondTitleName');
+        const mau = document.querySelector('#mau');
+        const gakMau = document.querySelector('#gakMau');
+        const img = document.querySelector('#img');
+        const next = document.querySelector('#next');
+
+        // ambil data nama dari localStorage & tampilkan (index2)
+
+        function getNameFunction(){
+            const getName = localStorage.getItem('name')
+            displayName.innerHTML = getName.toUpperCase();
+            thanksTitleName.innerHTML = getName.toUpperCase();
+            secondTitleName.innerHTML = getName.toUpperCase();
+            return getName;
+        }
+
+        
+        // Tombol mau ditekan
+        
+        mau.addEventListener('click', function(){
+            img.setAttribute('src', 'images/2_3.gif');
+            next.classList.remove('hidden');
+            mau.classList.add('hidden');
+            gakMau.classList.add('hidden');
+
+            h1DisplayName.innerHTML = 'Makasih Ya 🥰'
+            h1SecondTitleName.innerHTML = `Sekarang <span id="secondTitleName" class="text-pink-600 bg-white px-1 rounded-sm">${getNameFunction().toUpperCase()}</span><br> udah jadi pacar aku..`;
+        })
+
+        // Tombol gakMau ditekan
+
+        gakMau.addEventListener('click', function(){
+            function getRandomNumber(min, max){
+                return Math.floor(Math.random()*(max - min + 1) + min);
+            }
+
+            let x = getRandomNumber(-100, 100)
+            let y = getRandomNumber(-150, 150)
+            gakMau.style.transform = `translate(${x}px, ${y}px)`;
+            img.setAttribute('src', 'images/2_5.gif');
+        })
+
+        // Tombil Lanjut ditekan
+
+        next.addEventListener('click', function(){
+            second.classList.add('hidden');
+            whenDisplay.classList.remove('hidden');
+        })
+
+        // Second Display Script End
+
+        // Third Display Script
+
+        // Define all elements
+        const whenDisplay = document.querySelector('#when');
+        const filmDisplay = document.querySelector('#film');
+        const date = document.querySelector('#date');
+        const time = document.querySelector('#time');
+        const nextChoseFilmButton = document.querySelector('#nextChoseFilm');
+        const posters = document.querySelectorAll('.film-poster');
+        const inputFilm = document.querySelector('#title');
+        const nextButton = document.querySelector('#nextButton');
+
+        // Menentukan tanggal dan waktu
+        nextChoseFilmButton.addEventListener('click', function(){
+            const setDate = date.value;
+            const setTime = time.value;
+            if(setDate === '' || setTime === ''){
+                alert('Tolong diisi tanggal & waktunya ya cantik! 🥰')
+                return;
+            }
+            localStorage.setItem('date', setDate);
+            localStorage.setItem('time', setTime);
+            whenDisplay.classList.add('hidden');
+            filmDisplay.classList.remove('hidden');
+        })
+
+        // Memilih film dan dimasukkan ke value input
+        posters.forEach(poster=>{
+            poster.addEventListener('click', function(){
+                const title = poster.getAttribute('alt')
+                inputFilm.value = title.toUpperCase();
+            })
+        })
+        
+        // Tombol lanjut menuju index4
+        nextButton.addEventListener('click', function(){
+            const film = inputFilm.value;
+            if(film === ''){
+                alert('Pilih film dulu please! 🥲')        
+                return;
+            }
+            localStorage.setItem('film', film);
+            filmDisplay.classList.add('hidden');
+            fourth.classList.remove('hidden');
+        })
+
+        // Third Display Script End
+
+        // Fourth Display Script
+
+        // Define all Elements 
+        const foodPosters = document.querySelectorAll('.food-poster');
+        const inputFood = document.querySelector('#food');
+        const fourthNextButton = document.querySelector('#fourthNextButton');
+
+        // Pilih makanan & Input ke form input
+        foodPosters.forEach(poster=>{
+            poster.addEventListener('click', function(){
+                const food = poster.getAttribute('alt');
+                inputFood.value = food.toUpperCase();
+            })
+        })
+
+        // Tombol lanjut ditekan 
+        fourthNextButton.addEventListener('click', function(){
+            if(inputFood.value === ''){
+                alert('Pilih dulu makanannya ya🤗');
+                return;
+            }
+            const food = inputFood.value
+            localStorage.setItem('food',food.toUpperCase());
+            fourth.classList.add('hidden');
+            fifth.classList.remove('hidden')
+            tableScheduleFunction();
+        })
+
+        // Fourth Display Script End
+
+        // Fifth Display Script
+
+        // Define all Elements 
+        const tableSchedule = document.querySelector('#schedule');
+        const waLink = document.querySelector('#whatsapp');
+        const sendMessage = document.querySelector('#sendMessage');
+        const thanksTitleName = document.querySelector('#thanksTitleName');
+        
+        function tableScheduleFunction(){
+            
+            // Display Title Name
+            thanksTitleName.innerHTML = getNameFunction();
+    
+            // Get all data
+            const sendTo = localStorage.getItem('sendTo')
+            const name = localStorage.getItem('name');
+            const fifthDate = localStorage.getItem('date');
+            const fifthTime = localStorage.getItem('time');
+            const film = localStorage.getItem('film');
+            const food = localStorage.getItem('food');
+    
+            // DATE FORMAT
+            const inputDate = fifthDate;
+    
+            // ubah ke objek Date
+            const dateObj = new Date(inputDate);
+    
+            // format ke bahasa Indonesia
+            const formatted = new Intl.DateTimeFormat("id-ID", {
+                weekday: "long",
+                day: "numeric",
+                month: "long",
+                year: "numeric"
+            }).format(dateObj);
+    
+            console.log(formatted);
+    
+    
+    
+            // schedule body
+            tableSchedule.innerHTML = 
+                `<tr>
+                    <th class='text-sm text-left poppins-bold text-pink-500 pr-2 text-shadow-lg'>Nama<span> :</span></th>
+                    <td class='text-sm text-start poppins-bold text-pink-500'> ${name}</td>
+                </tr>
+                <tr>
+                    <th class='text-sm text-left poppins-bold text-pink-500 pr-2 text-shadow-lg'>Tanggal<span> :</span></th>
+                    <td class='text-sm text-start poppins-bold text-pink-500'> ${formatted}</td>
+                </tr>
+                <tr>
+                    <th class='text-sm text-left poppins-bold text-pink-500 pr-2 text-shadow-lg'>Jam<span> :</span></th>
+                    <td class='text-sm text-start poppins-bold text-pink-500'> ${fifthTime}</td>
+                </tr>
+                <tr>
+                    <th class='text-sm text-left poppins-bold text-pink-500 pr-2 text-shadow-lg'>Film<span> :</span></th>
+                    <td class='text-sm text-start poppins-bold text-pink-500'> ${film}</td>
+                </tr>
+                <tr>
+                    <th class='text-sm text-left poppins-bold text-pink-500 pr-2 text-shadow-lg'>Makan<span> :</span></th>
+                    <td class='text-sm text-start poppins-bold text-pink-500'> ${food}</td>
+                </tr>`
+        
+                const datas = [sendTo, name,formatted, fifthTime, film, food]
+                return datas;
+        }
+        // Kirim button
+        sendMessage.addEventListener('click', function(){
+            const datas = tableScheduleFunction();
+            console.log(tableScheduleFunction());
+            window.location.href = `https://api.whatsapp.com/send?phone=${datas[0]}&text=*Haiii!%20%F0%9F%98%84%F0%9F%92%9E%20${datas[1]}%20di%20sini*~%0AAku%20udah%20lihat%20rencana%20kamu%2C%20dan%20keliatannya%20*lucu%20banget*%20hehe.%0A*${datas[2]}*%2C%20jam%20*${datas[3]}*%2C%20nonton%20film%20*${datas[4]}*%20%F0%9F%8E%AC%2C%20habis%20itu%20makan%20*${datas[5]}*%20bareng%E2%80%A6%0AKayaknya%20bakal%20jadi%20hari%20yang%20super%20seru%20ya%20%E2%9C%A8%0AAku%20suka%20banget%20idenya%2C%20dan%20tentu%20aja%20aku%20mau%20ikut!%0ANanti%20tinggal%20kirim%20lokasi%20ya%E2%80%A6%0AAku%20udah%20nggak%20sabar%20nih%F0%9F%98%B3%F0%9F%92%97`;
+            localStorage.clear();
+        })
+
+        // Fifth Display Script End
+    </script>
+</body>
+
+</html>
