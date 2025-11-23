@@ -1,6 +1,6 @@
 // background
 const body = document.getElementById('body');
-body.style.backgroundImage = `url('/images/bg1.webp')`; 
+body.style.backgroundImage = `url('/images/1.jpg')`; 
 body.style.backgroundSize = `cover`; 
 
 // audio button
