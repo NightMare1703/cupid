@@ -1,13 +1,12 @@
-// background
-const body = document.getElementById('body');
-body.style.backgroundImage = `url('/images/1.jpg')`; 
-body.style.backgroundSize = `cover`; 
+// // background
+// const body = document.getElementById('body');
+// body.style.backgroundImage = `url('/images/1.jpg')`; 
+// body.style.backgroundSize = `cover`; 
 
 // audio button
 const audio = document.getElementById("bgm");
 const btn = document.getElementById("musicBtn");
 
-audio.play();
 let isPlay = true;
 btn.addEventListener("click", () => {
     if (!isPlay) {

@@ -14,8 +14,8 @@
     <title>I Love You</title>
 </head>
 
-<body id="body">
-    <div class="audio-container p-5">
+<body id="body" class="bg-[url(/images/bg1.webp)] bg-cover bg-center h-full">
+    <div class="audio-container p-5 -z-10">
         <audio id="bgm" autoplay loop src="audio/cupid.mp3"></audio>
         <button id="musicBtn"
             class="cursor-pointer fixed z-10 w-10 h-10 rounded-4xl hover:bg-pink-500 hover:text-white duration-300 bg-white text-pink-500 text-center shadow-lg shadow-black/60">
@@ -26,7 +26,7 @@
             </svg>
         </button>
     </div>
-    <div class="container flex justify-center bg-cover bg-center lg:h-[50vmax] h-[100vmax]">
+    <div class="container flex justify-center">
         <div
             class="my-auto p-5 content backdrop-blur-md bg-[rgba(255,0,140,0.23)] rounded-xl shadow-lg shadow-black/70">
             <!-- First Display -->
@@ -198,11 +198,13 @@
                                 type="text" placeholder="Tulis judul film lain 🥰" autocomplete="off" />
                         </li>
                         <li>
+                            <a href="#fourth">
                             <button id="nextButton"
                                 class="w-30 text-white poppins-medium cursor-pointer mt-3 bg-pink-500 duration-300 p-3 rounded-md hover:bg-pink-600"
                                 type="submit">
                                 Lanjut &raquo;
                             </button>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -219,13 +221,13 @@
                 <h1 class="text-center text-shadow-lg text-2xl poppins-semibold text-white">
                     Mau Makan Apa?
                 </h1>
-                <img class="mx-auto h-60" src="images/4.gif" alt="" />
+                <img class="mx-auto w-[211px]" src="images/4.gif" alt="" />
                 <div id="filmContainer" class="film-container">
                     <ul class="flex justify-evenly flex-wrap">
                         <li class="mt-5">
                             <div class="cursor-pointer hover:scale-[110%] duration-300">
                                 <a href="#fourthNextButton">
-                                    <img class="food-poster w-25 rounded-xl drop-shadow-lg hover:border-2 hover:border-pink-600 shadow-lg shadow-black/70"
+                                    <img class="food-poster w-[106px] rounded-xl drop-shadow-lg hover:border-2 hover:border-pink-600 shadow-lg shadow-black/70"
                                         src="foods/makanan (1).webp" alt="Nasi Padang" />
                                 </a>
                             </div>
@@ -233,7 +235,7 @@
                         <li class="mt-5">
                             <div class="cursor-pointer hover:scale-[110%] duration-300">
                                 <a href="#fourthNextButton">
-                                    <img class="food-poster w-25 rounded-xl drop-shadow-lg hover:border-2 hover:border-pink-600 shadow-lg shadow-black/70"
+                                    <img class="food-poster w-[106px] rounded-xl drop-shadow-lg hover:border-2 hover:border-pink-600 shadow-lg shadow-black/70"
                                         src="foods/makanan (2).webp" alt="Nasi Goreng" />
                                 </a>
                             </div>
@@ -241,7 +243,7 @@
                         <li class="mt-5">
                             <div class="cursor-pointer hover:scale-[110%] duration-300">
                                 <a href="#fourthNextButton">
-                                    <img class="food-poster w-25 rounded-xl drop-shadow-lg hover:border-2 hover:border-pink-600 shadow-lg shadow-black/70"
+                                    <img class="food-poster w-[106px] rounded-xl drop-shadow-lg hover:border-2 hover:border-pink-600 shadow-lg shadow-black/70"
                                         src="foods/makanan (3).webp" alt="Sate Ayam" />
                                 </a>
                             </div>
@@ -249,7 +251,7 @@
                         <li class="mt-5">
                             <div class="cursor-pointer hover:scale-[110%] duration-300">
                                 <a href="#fourthNextButton">
-                                    <img class="food-poster w-25 rounded-xl drop-shadow-lg hover:border-2 hover:border-pink-600 shadow-lg shadow-black/70"
+                                    <img class="food-poster w-[106px] rounded-xl drop-shadow-lg hover:border-2 hover:border-pink-600 shadow-lg shadow-black/70"
                                         src="foods/makanan (4).webp" alt="Burger" />
                                 </a>
                             </div>
@@ -257,7 +259,7 @@
                         <li class="mt-5">
                             <div class="cursor-pointer hover:scale-[110%] duration-300">
                                 <a href="#fourthNextButton">
-                                    <img class="food-poster w-25 rounded-xl drop-shadow-lg hover:border-2 hover:border-pink-600 shadow-lg shadow-black/70"
+                                    <img class="food-poster w-[106px] rounded-xl drop-shadow-lg hover:border-2 hover:border-pink-600 shadow-lg shadow-black/70"
                                         src="foods/makanan (5).webp" alt="Spicy Chicken" />
                                 </a>
                             </div>
@@ -265,7 +267,7 @@
                         <li class="mt-5">
                             <div class="cursor-pointer hover:scale-[110%] duration-300">
                                 <a href="#fourthNextButton">
-                                    <img class="food-poster w-25 rounded-xl drop-shadow-lg hover:border-2 hover:border-pink-600 shadow-lg shadow-black/70"
+                                    <img class="food-poster w-[106px] rounded-xl drop-shadow-lg hover:border-2 hover:border-pink-600 shadow-lg shadow-black/70"
                                         src="foods/makanan (6).webp" alt="Ketoprak" />
                                 </a>
                             </div>
@@ -273,7 +275,7 @@
                         <li class="mt-5">
                             <div class="cursor-pointer hover:scale-[110%] duration-300">
                                 <a href="#fourthNextButton">
-                                    <img class="food-poster w-25 rounded-xl drop-shadow-lg hover:border-2 hover:border-pink-600 shadow-lg shadow-black/70"
+                                    <img class="food-poster w-[106px] rounded-xl drop-shadow-lg hover:border-2 hover:border-pink-600 shadow-lg shadow-black/70"
                                         src="foods/makanan (7).webp" alt="Mie Gacoan" />
                                 </a>
                             </div>
@@ -281,7 +283,7 @@
                         <li class="mt-5">
                             <div class="cursor-pointer hover:scale-[110%] duration-300">
                                 <a href="#fourthNextButton">
-                                    <img class="food-poster w-25 rounded-xl drop-shadow-lg hover:border-2 hover:border-pink-600 shadow-lg shadow-black/70"
+                                    <img class="food-poster w-[106px] rounded-xl drop-shadow-lg hover:border-2 hover:border-pink-600 shadow-lg shadow-black/70"
                                         src="foods/makanan (8).webp" alt="Bakso" />
                                 </a>
                             </div>
@@ -289,7 +291,7 @@
                         <li class="mt-5">
                             <div class="cursor-pointer hover:scale-[110%] duration-300">
                                 <a href="#fourthNextButton">
-                                    <img class="food-poster w-25 rounded-xl drop-shadow-lg hover:border-2 hover:border-pink-600 shadow-lg shadow-black/70"
+                                    <img class="food-poster w-[106px] rounded-xl drop-shadow-lg hover:border-2 hover:border-pink-600 shadow-lg shadow-black/70"
                                         src="foods/makanan (9).webp" alt="Mie Ayam" />
                                 </a>
                             </div>
