@@ -1,5 +1,6 @@
-.container{
+body{
     background-image: url('/images/bg.webp');
+    background-size: cover;
 }
 
 .poppins-thin {
