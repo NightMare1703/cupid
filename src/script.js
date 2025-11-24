@@ -7,6 +7,7 @@
 const audio = document.getElementById("bgm");
 const btn = document.getElementById("musicBtn");
 
+audio.play();
 let isPlay = true;
 btn.addEventListener("click", () => {
     if (!isPlay) {
